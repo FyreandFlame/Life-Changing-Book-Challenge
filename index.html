@@ -3,9 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <title>Life Changing Book</title>
+<style>
+.container{
+  max-width: 60%;
+}
+
+</style>
 </head>
 <body>
+  <div class="container">
   <div>Every reader has that one book that they can't let go of. It gets stuck in your head and you come back to it over and over. For me, that book is <a href="https://en.wikipedia.org/wiki/Junk_(novel)" target="_blank">Junk</a> (AKA Smack in the US) by Melvin Burgess.
   Written in November 1996, I personally read this book at a young age, maybe 13 years old, and it has stuck with me ever since. As a person who grew up in an area that is, shall we say, poor, I grew up knowing the dangers of drugs and knowing that my peers and their parents were heavily involved with drugs.
   Drugs were so common in my area that my school regularly held classes warning of the dangers of drugs. These classes still go on today, almost 20 years later.
@@ -22,7 +30,7 @@ Now, some people will see this way of life as low class and demand the children 
 Get your copy <a href="https://www.amazon.co.uk/Junk-Melvin-Burgess/dp/1783448458/ref=asc_df_1783448458/?tag=googshopuk-21&linkCode=df0&hvadid=499402384307&hvpos=&hvnetw=g&hvrand=16172908365489481339&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9046896&hvtargid=pla-1337502122608&psc=1&th=1&psc=1" target="_blank">here</a></div>
 <div> </br>If you or anyone you know, are looking for help with drug use, or mental health, please see the below UK based links. These links are for both drugs and alochol users as well as their families</div>
 </br>
-
+</div>
 Drug support:
 
 <ul class="drug">
@@ -43,21 +51,22 @@ Drug support:
 <br>
 Mental Health Support:
 <ul class="mentalHealth">
-  <li><a href="http://www.samaritans.org/">Samaritans</a></li>
-  <li><a href="https://www.mind.org.uk/">Mind</a></li>
-  <li><a href="https://www.rethink.org/">Rethink (formerly known as National Schizophrenia Fellowship)</a></li>
-  <li><a href="https://www.papyrus-uk.org/">Papyrus UK</a></li>
-<li><a href="https://www.youngminds.org.uk/">YoungMinds</a></li>
-<li><a href="https://www.thecalmzone.net/">Campaign Against Living Miserably (CALM)</a></li>
-<li><a href="https://www.sane.org.uk/">Sane</a></li>
+  <li><a href="http://www.samaritans.org/"target="_blank">Samaritans</a></li>
+  <li><a href="https://www.mind.org.uk/"target="_blank">Mind</a></li>
+  <li><a href="https://www.rethink.org/"target="_blank">Rethink (formerly known as National Schizophrenia Fellowship)</a></li>
+  <li><a href="https://www.papyrus-uk.org/"target="_blank">Papyrus UK</a></li>
+<li><a href="https://www.youngminds.org.uk/"target="_blank">YoungMinds</a></li>
+<li><a href="https://www.thecalmzone.net/"target="_blank">Campaign Against Living Miserably (CALM)</a></li>
+<li><a href="https://www.sane.org.uk/"target="_blank">Sane</a></li>
 
 </ul>
 
+
 if you would like to submit your own experience of this or any other book, please fill in the below submission form. It may be featured on our next update 😎
 <div>
-  <form action="mailto:jennifer.mccafferty@hotmail.co.uk" method="get">
+  <form id = userForm>
     <div class="form-submission">
-      <label for="name">Enter your name: </label>
+      <label for="name">Enter your first name: </label>
       <input type="text" name="name" id="name" required>
     </div>
     <div class="form-submission">
@@ -70,16 +79,29 @@ if you would like to submit your own experience of this or any other book, pleas
     </div>
     <div class="form-submission">
       <label for="user-comments">Please add your own comments below</label>
-      <input type="text" name="user-comments" id="user-comments" required>
-      <input type="submit" value="Submit!">
+      <input type="text" name="user-comments" id="userComments" required>
+      <input type="submit" id="idea" value="Submit">
     </div>
   </form>
 
   </form>
+
 </div>
 
-
+</div> 
 
 
 </body>
-</htm>
+<script>
+function alertResponse() {
+  let name = document.getElementById('name').value;
+  let bookName = document.getElementById('book').value;
+  let email = document.getElementById('email').value;
+  alert(`Hello ${name}. Thank you for your review on ${bookName}. We will contact you at ${email} if we use your submission.`);
+}
+
+let idea = document.querySelector('#idea');
+idea.addEventListener('click', alertResponse);
+
+</script>
+</html>
